@@ -1,0 +1,57 @@
+.hero {
+    position: relative; /* Needed for absolute positioning of background */
+    width: 100%;
+    height: 500px; /* Adjust as needed */
+    background-image: url("hero-image.jpg"); /* Or a solid color */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex; /* Use flexbox for easy centering */
+    align-items: center;
+    justify-content: center;
+    color: white; /* Text color, adjust as needed */
+    text-align: center; /* Center text horizontally */
+  }
+  
+  .hero::before { /* Dark overlay for better text contrast */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  }
+  
+  .hero-content {
+    position: relative; /* Bring content above overlay */
+    z-index: 1; /* Ensure text is on top of overlay */
+    padding: 20px;
+    max-width: 800px; /* Prevent text from stretching too wide */
+  }
+  
+  .hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    background-color: #007bff; /* Example button color */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+  }
