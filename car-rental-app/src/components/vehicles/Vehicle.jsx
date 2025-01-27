@@ -2,38 +2,45 @@ import React, { useEffect, useState } from 'react'
 import { getVehicles } from './VehicleService'
 import VehicleItem from './VehicleItem'
 
-function Vehicle() {
-    let [vehicles,setVehicles]=useState([])
 
-    useEffect(()=>{
-        getVehicles().then(data=>{
+function Vehicle() {
+    let [vehicles, setVehicles] = useState([])
+
+    useEffect(() => {
+        getVehicles().then(data => {
             console.log(data)
             setVehicles(data)
         })
-    },[])
+    }, [])
 
 
 
-  return (
-    <div>
+    return (
 
-      
-        {
-            vehicles.map((v)=>{
-                return (
-                    <VehicleItem
-                        models={v.models}
-                        type={v.type}
-                        price={v.price}
-                        licensePlate={v.licensePlate}
-                        status={v.status}
+        <div>
+        
 
-                    />
-                )
-            })
-        }         
-    </div>
-  )
+            <div className="row row-cols-1 row-cols-md-3 g-4 p-1 my-1">
+                {/* Dispalying vehicle: Start */}
+
+                {
+                    vehicles.map((v) => {
+                        return (
+                            <VehicleItem
+                                models={v.models}
+                                type={v.type}
+                                price={v.price}
+                                licensePlate={v.licensePlate}
+                                status={v.status}
+
+                            />
+                        )
+                    })
+                }
+                {/* Dispalying vehicle :End */}
+            </div>
+        </div>
+    )
 }
 
 export default Vehicle

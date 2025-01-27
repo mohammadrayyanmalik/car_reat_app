@@ -3,14 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Cards</title>
+    <title>Cab Card</title>
     <style>
-        
+        .cab-card {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            margin: 20px;
+        }
+
+        .cab-image {
+            overflow: hidden;
+        }
+
+        .cab-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .cab-content {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cab-name {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .cab-features {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            flex: 1;
+        }
+
+        .feature img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .pricing-cta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        .discounted-price {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .savings {
+            font-size: 0.9em;
+            color: green;
+        }
+
+        .cta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .details-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .select-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .distance {
+            font-size: 0.9em;
+            color: #777;
+            text-align: right;
+        }
     </style>
 </head>
 <body>
 
-
-
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cab Cards</title>
+        <style>
+            .card-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center; /* Center cards horizontally */
+                gap: 20px; /* Consistent spacing between cards */
+                padding: 20px; /* Add padding around container */
+            }
+    
+            .card {
+                display: flex;
+                flex-direction: column;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+                width: 300px; /* Slightly smaller width */
+                background-color: white; /* Add white background */
+                transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+            }
+    
+            .card:hover {
+                transform: scale(1.02); /* Slight scale on hover */
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+            }
+    
+            .card-image {
+                overflow: hidden;
+                height: 200px; /* Fixed height for images */
+            }
+    
+            .card-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Maintain aspect ratio and cover container */
+                display: block;
+            }
+    
+            .card-details {
+                padding: 15px;
+                flex: 1; /* Allow details to take up available space */
+            }
+    
+            .card-title { /* Renamed for clarity */
+                font-weight: 600; /* Slightly bolder */
+                font-size: 1.1em;
+                margin-bottom: 8px;
+            }
+    
+            .card-details p {
+                margin-bottom: 5px; /* Reduced spacing between paragraphs */
+                font-size: 0.95em;
+                color: #555; /* Slightly darker text */
+            }
+    
+            .card-pricing {
+                padding: 10px 15px;
+                border-top: 1px solid #eee; /* Subtle separator */
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+    
+            .price {
+                font-weight: 500;
+                font-size: 1.1em;
+            }
+    
+            .select-button {
+                background-color: #007bff;
+                color: white;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.2s ease;
+            }
+    
+            .select-button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <div class="card-container">
+        <div class="card">
+            <div class="card-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/2019_Maruti_Suzuki_Wagon_R_%28India%29.jpg/1200px-2019_Maruti_Suzuki_Wagon_R_%28India%29.jpg" alt="Wagon R"/>
+            </div>
+            <div class="card-details">
+                <h3>{type}</h3>
+                <p>{models}</p>
+                <p>{licensePlate}</p>
+                <p>{status}</p>
+                <p>Includes Toll, State Tax & GST</p>
+            </div>
+            <div class="card-pricing">
+                <p>{price}</p>
+               
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="card-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/2019_Maruti_Suzuki_Wagon_R_%28India%29.jpg/1200px-2019_Maruti_Suzuki_Wagon_R_%28India%29.jpg" alt="Wagon R"/>
+            </div>
+            <div class="card-details">
+                <h3 class="card-title">PrimeSaden</h3>
+                <p>MH 12 AJ 2219</p>
+                <p>Not Available</p>
+                <p>Includes Toll, State Tax & GST</p>
+            </div>
+            <div class="card-pricing">
+                <div class="price">₹3000</div>
+                <button class="select-button">Select</button>
+            </div>
+        </div>
+            <div class="card">
+            <div class="card-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/2019_Maruti_Suzuki_Wagon_R_%28India%29.jpg/1200px-2019_Maruti_Suzuki_Wagon_R_%28India%29.jpg" alt="Wagon R"/>
+            </div>
+            <div class="card-details">
+                <h3 class="card-title">Truck</h3>
+                <p>MH 12 2J 0219</p>
+                <p>Rent</p>
+                <p>Includes Toll, State Tax & GST</p>
+            </div>
+            <div class="card-pricing">
+                <div class="price">₹4000</div>
+                <button class="select-button">Select</button>
+            </div>
+        </div>
+    </div>
+    
+    </body>
+    </html>
 </body>
 </html>

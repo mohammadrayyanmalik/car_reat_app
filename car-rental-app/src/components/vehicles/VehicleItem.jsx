@@ -1,22 +1,29 @@
 import React from "react";
 import vehicle from "../vehicles/Vehicle";
+import { useNavigate } from "react-router-dom";
+
 function VehicleItem({models, type, price, licensePlate, status}) {
+
+  const navigte=useNavigate();
   return (
     <div>
       <div class="card-container">
-        <div class="card">
-          {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/2019_Maruti_Suzuki_Wagon_R_%28India%29.jpg/1200px-2019_Maruti_Suzuki_Wagon_R_%28India%29.jpg" alt="Wagon R"/> */}
-          <div class="card-details">
-            <h3>{type}</h3>
-            <p>{models}</p>
-            <p>{licensePlate}</p>
-            <p>{status}</p>
-            <p>Includes Toll, State Tax & GST</p>
-          </div>
-          <div class="card-pricing">
-            <p>{price}</p>
-          </div>
-          <button class="select-button">Select</button>
+      <div class="card">
+            <div class="card-image">
+                {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/2019_Maruti_Suzuki_Wagon_R_%28India%29.jpg/1200px-2019_Maruti_Suzuki_Wagon_R_%28India%29.jpg" alt="Wagon R"/> */}
+            </div>
+            <div class="card-details">
+                <h3>Vehicle type: {type}</h3>
+                <p>Models :{models}</p>
+                <p>Vehicle Number: {licensePlate}</p>
+                <p>Status: {status}</p>
+                <p>Includes Toll, State Tax & GST</p>
+                <p>Price: {price}</p>
+            </div>
+            <div class="card-pricing">
+                
+                <button class="select-button" onClick={()=>{navigte("registration")}}>Select</button>
+            </div>
         </div>
       </div>
     </div>

@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import Vehicle from "./components/vehicles/Vehicle";
+import Registration from "./components/Registration";
+import AdminVehicle from "./components/Admin/AdminVehicle";
 
 const route = createBrowserRouter([
   {
@@ -18,7 +20,18 @@ const route = createBrowserRouter([
   element:<>
   <Navbar/>
   <Vehicle/>
+  </>
 
+},
+
+{
+  path:"/registration",
+  element:<Registration/>
+},
+{
+  path:"adminVehicle",
+  element:<>
+ <AdminVehicle/>
   </>
 }
 

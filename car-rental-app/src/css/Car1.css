@@ -159,3 +159,160 @@ body {
 
   
   /* Navbar End */
+
+
+  /* Registration Start */
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    background-image: url('../imgaes/backgroung\ img\ for\ registration.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+input[type="number"],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.error {
+    color:red;
+    font-size: small;
+    margin-top: -8px;
+    margin-bottom: 8px;
+}
+
+  /* Registration End */
+
+
+  /* vehicle card start */
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center cards horizontally */
+    gap: 20px; /* Consistent spacing between cards */
+    padding: 20px; /* Add padding around container */
+    
+}
+
+.card {
+  height: 500px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+    width: 300px; /* Slightly smaller width */
+    background-color: white; /* Add white background */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.card:hover {
+    transform: scale(1.02); /* Slight scale on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+}
+
+.card-image {
+    overflow: hidden;
+    height: 200px; /* Fixed height for images */
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+    display: block;
+}
+
+.card-details {
+    padding: 15px;
+    flex: 1; /* Allow details to take up available space */
+}
+
+.card-title { /* Renamed for clarity */
+    font-weight: 600; /* Slightly bolder */
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.card-details p {
+    margin-bottom: 5px; /* Reduced spacing between paragraphs */
+    font-size: 0.95em;
+    color: #555; /* Slightly darker text */
+}
+
+.card-pricing {
+    padding: 10px 15px;
+    border-top: 1px solid #eee; /* Subtle separator */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.select-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.select-button:hover {
+    background-color: #0056b3;
+}
+  
+  /* vehicle card end */

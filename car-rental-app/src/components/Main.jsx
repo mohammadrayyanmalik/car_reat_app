@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Main() {
+    const navigate=useNavigate();
 
   const submitHandler=()=>{
     
@@ -28,7 +30,7 @@ function Main() {
                 <input type="time" id="pickup-time"/>
             </div>
             <div class="form-button">
-                <button class="cta-button" type='submit'>Explore Cabs</button>
+                <button class="cta-button" type='submit' onClick={()=>{navigate("/vehicles")}}>Explore Cabs</button>
             </div>
         </form>
       
